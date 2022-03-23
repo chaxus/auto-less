@@ -2,7 +2,7 @@
  * @Author: rzh
  * @Date: 2021-10-04 15:53:17
  * @LastEditors: ran
- * @LastEditTime: 2022-03-23 11:58:31
+ * @LastEditTime: 2022-03-23 12:33:49
  * @Description: Do not edit
  */
 import resolve from 'rollup-plugin-node-resolve';
@@ -24,7 +24,7 @@ export default [
     input: './index.ts',
     output: {
       name: 'auto-less',
-      file: 'dist/bundle.js',
+      file: 'bundle.js',
       format: 'umd',
       sourcemap: true,
       banner: '/*eslint-disable*/',
