@@ -1,6 +1,6 @@
 {
-  "name": "auto-less",
-  "version": "1.0.0",
+  "name": "auto-import-less",
+  "version": "0.0.4",
   "main": "bundle.js",
   "repository": "git@github.com:chaxus/auto-less.git",
   "author": "chaxus",
