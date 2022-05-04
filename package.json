@@ -1,6 +1,6 @@
 {
-  "name": "auto-import-less",
-  "version": "0.0.5",
+  "name": "auto-require-css",
+  "version": "0.0.4",
   "main": "bundle.js",
   "repository": "git@github.com:chaxus/auto-less.git",
   "author": "chaxus",
@@ -22,5 +22,12 @@
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.31.2",
     "typescript": "^4.6.2"
-  }
+  },
+  "keywords": [
+    "webpack",
+    "css",
+    "loader",
+    "less",
+    "scss"
+  ]
 }

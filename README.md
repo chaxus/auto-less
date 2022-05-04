@@ -1,12 +1,11 @@
 
-## auto-require-less
+## auto-require-css
 
-Js or index.ts automatically require a less file with the same name at the end of the file.
+js,tsx,jsx file automatically require a less,css,scss file with the same name at the end of the file.
 
-自动在index.js或者index.ts文件最后面require同名的less文件
 ## Getting Started
 ```
-npm i auto-require-less -D
+npm i auto-require-css -D
 ```
 Then add the plugin to your webpack config. For example:
 ### webpack.config.js
@@ -16,7 +15,42 @@ module.exports = {
     rules: [
       {
         test: /\.(js|jsx|tsx)?$/,
-        use: ["auto-require-less"],
+        use: ["auto-require-css"],
+      },
+    ],
+  },
+};
+```
+CSS Module mode is now supported，
+
+```js
+module.exports = {
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: [
+          {
+            loader: "style-loader",
+          },
+          {
+            loader: "css-loader",
+            options: {
+              modules: {
+                localIdentName: "[local]-[hash:base64:5]",
+              }
+            },
+          },
+        ],
+      },
+      {
+        test: /\.(js|jsx|tsx)?$/,
+        use: [{
+          loader:"auto-require-css",
+          options:{
+            mode:'module'
+          }
+        }],
       },
     ],
   },
